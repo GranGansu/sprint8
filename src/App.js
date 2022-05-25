@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Starships from './pages/Starships';
+import NavBar from './components/NavBar';
+import Bienvenida from './pages/Bienvenida';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import GuardedRoute from './GuardedRoute';
+import FichaNave from './pages/FichaNave';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const [altura, setAltura] = useState(0);
+    return (
+        <Router>
+            <NavBar Link={Link} setAltura={setAltura} />
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<Bienvenida />}  />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/ficha/:id" element={<FichaNave />} />
+                    <Route path="/naves" element={
+                        <GuardedRoute auth={true}>
+                            <Starships preScroll={altura} />
+                        </GuardedRoute>
+                    } />
+                </Routes>
+            </div>
+        </Router>
+    )
 }
-
-export default App;

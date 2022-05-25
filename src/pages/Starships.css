@@ -24,6 +24,23 @@
   color: white;
 }
 
+.margenes {
+  margin-bottom: 100px 20px;
+}
+
+.none {
+  display: none;
+}
+
+#blur img {
+  width: 50px;
+}
+
+#blur p {
+  filter: blur(3px);
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -32,7 +49,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+.margenes a>div p:first-child {
+  font-weight: bold;
+  font-size: large;
+  color: white;
 }

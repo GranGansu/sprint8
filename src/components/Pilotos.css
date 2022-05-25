@@ -1,0 +1,12 @@
+.pilotos {
+    background: white;
+    color: black;
+    border-radius: 5px;
+    width: fit-content;
+    padding:20px;
+    font-size: medium;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}

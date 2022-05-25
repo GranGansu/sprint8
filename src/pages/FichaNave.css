@@ -1,0 +1,13 @@
+.tabla p{
+    width: 50%;
+    display: inline-block;
+}
+.tabla{
+    border:1px solid white;
+    border-top: 5px solid;
+    padding: 10px;
+}
+p span{
+    font-weight: bold;
+    font-size: large;
+}

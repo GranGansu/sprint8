@@ -1,0 +1,44 @@
+ul {
+    list-style: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    padding: 0;
+    align-content: space-around;
+    justify-content: center;
+    border: 1px solid gray;
+}
+
+li:hover {
+    background-color: gray;
+    cursor: pointer;
+    border-bottom: 2px solid gray;
+}
+
+.active {
+    border-bottom: 2px solid violet;
+}
+
+li {
+    color: white;
+    text-decoration: none;
+}
+
+ul li {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    border-top: none;
+    border-bottom: 2px solid;
+}
+
+ul li:first-child {
+    border-right: none;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 200px;
+}
